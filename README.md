@@ -5,7 +5,7 @@
 ## Installation
 
 ```
-npm install promisequeueous --save
+npm install js-promise-queue --save
 ```
 
 ## Usage
@@ -24,7 +24,7 @@ The module exports a function that takes 3 arguments:
 - Run Promises sequentially, printing the result at the end
 
     ```js
-    const promiseQ = require('promisequeueous')
+    const promiseQueue = require('js-promise-queue')
 
     const factoryFn = value => {
       return new Promise((resolve, reject) => {
@@ -32,13 +32,13 @@ The module exports a function that takes 3 arguments:
       })
     }
 
-    promiseQ([1, 2, 3], factoryFn).then(console.log) // Returns: [1, 2, 3]
+    promiseQueue([1, 2, 3], factoryFn).then(console.log) // Returns: [1, 2, 3]
     ```
 
 - Run Promises sequentially with an interval of 3 seconds between each
 
     ```js
-    const promiseQ = require('promisequeueous')
+    const promiseQueue = require('js-promise-queue')
 
     const factoryFn = value => {
       console.log('Promise: starting...')
@@ -52,7 +52,7 @@ The module exports a function that takes 3 arguments:
       })
     }
 
-    promiseQ([1, 2, 3], factoryFn).then(console.log) // Returns: [1, 2, 3]
+    promiseQueue([1, 2, 3], factoryFn).then(console.log) // Returns: [1, 2, 3]
 
     /*
       00:00:00: Prints "Promise: starting..."
