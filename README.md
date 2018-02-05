@@ -1,4 +1,4 @@
-# PromiseQueueous
+# js-promise-queue
 
 > Runs JavaScript Promises in a queue
 
