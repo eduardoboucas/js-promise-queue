@@ -13,11 +13,11 @@ npm install promisequeueous --save
 The module exports a function that takes 3 arguments:
 
 1. `items`: An array of items that will generate Promises
-1. `factory: A factory function that:
-  - Is called for each item, with its value as the only parameter
-  - Returns a Promise
+1. `factory`: A factory function that:
+    - Is called for each item, with its value as the only parameter
+    - Returns a Promise
 1. `options`: An optional options object, with one or more of these properties:
-  - `interval`: Time (in milliseconds) to wait in between Promise executions
+    - `interval`: Time (in milliseconds) to wait in between Promise executions
 
 ## Examples
 
