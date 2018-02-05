@@ -27,10 +27,4 @@ function promiseQueue(items, factory, {
   }, Promise.resolve()).then(() => results)
 }
 
-module.exports = (options = {}) => {
-  if (options.extendGlobal && (typeof Promise === 'function') && !Promise.queue) {
-    Promise.queue = promiseQueue
-  }
-
-  return promiseQueue
-}
+module.exports = promiseQueue

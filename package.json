@@ -1,6 +1,6 @@
 {
   "name": "js-promise-queue",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Runs JavaScript Promises in a queue",
   "main": "index.js",
   "scripts": {
