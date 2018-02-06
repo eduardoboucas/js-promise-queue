@@ -32,7 +32,8 @@ The module exports a function that takes 3 arguments:
       })
     }
 
-    promiseQueue([1, 2, 3], factoryFn).then(console.log) // Returns: [1, 2, 3]
+    promiseQueue([1, 2, 3], factoryFn).then(console.log)
+    // Returns: [1, 2, 3]
     ```
 
 - Run Promises sequentially with an interval of 3 seconds between each
@@ -52,7 +53,10 @@ The module exports a function that takes 3 arguments:
       })
     }
 
-    promiseQueue([1, 2, 3], factoryFn).then(console.log) // Returns: [1, 2, 3]
+    promiseQueue([1, 2, 3], factoryFn, {
+      interval: 3000
+    }).then(console.log)
+    // Returns: [1, 2, 3]
 
     /*
       00:00:00: Prints "Promise: starting..."
