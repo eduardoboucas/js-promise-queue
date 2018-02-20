@@ -7,7 +7,7 @@ function promiseQueue(items, factory, {
   return items.reduce((queue, item, index) => {
     return queue.then(() => {
       if (typeof factory === 'function') {
-        return factory(item)
+        return factory(item, index)
       }
       
       return item

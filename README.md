@@ -14,7 +14,7 @@ The module exports a function that takes 3 arguments:
 
 1. `items`: An array of items that will generate Promises
 1. `factory`: A factory function that:
-    - Is called for each item, with its value as the only parameter
+    - Is called for each item, with its value as the first parameter and its index as the second
     - Returns a Promise
 1. `options`: An optional options object, with one or more of these properties:
     - `interval`: Time (in milliseconds) to wait in between Promise executions
@@ -40,7 +40,7 @@ The module exports a function that takes 3 arguments:
     ```js
     const promiseQueue = require('js-promise-queue')
 
-    const factoryFn = value => {
+    const factoryFn = (value, index) => {
       console.log('Promise: starting...')
 
       return new Promise((resolve, reject) => {
